@@ -19,7 +19,7 @@ import java.lang.annotation.Target;
  * JVM会保留注解，加载在内存中了，那么程序可以通过反射获取该注解。
  */
 @Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.TYPE)
+@Target(ElementType.TYPE) // TYPE表示: 该注解可以标注在Class, interface (including annotation type), or enum declaration
 public @interface ComponentScan {
 
     String value() default "";
