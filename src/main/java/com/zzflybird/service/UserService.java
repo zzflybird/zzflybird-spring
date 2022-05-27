@@ -1,6 +1,7 @@
 package com.zzflybird.service;
 
 import com.spring.Component;
+import com.spring.Scope;
 
 /**
  * @Auther: zzflybird
@@ -8,12 +9,13 @@ import com.spring.Component;
  * @Description: com.zzflybird.service
  * @version: 1.0
  */
-@Component
+@Component(value = "userService")
+//@Scope(value = "prototype") // 没有Scope注解，默认单例的
+//@Scope(value = "singleton")
 public class UserService {
 
     public void test()
     {
         System.out.println("test");
-
     }
 }
